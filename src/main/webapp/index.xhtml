@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="jakarta.faces.core">
+    <h:head class="color">
+        <title>Congregare</title>
+    </h:head >
+    <h:body> 
+
+        <h:form>
+
+            <style>
+                body{
+
+
+                    background-color: #0056b5;
+
+                }
+                h2{
+                    color: black;
+                }
+                h3{
+                    color: black;
+                }
+                footer{
+                    text-align: center;
+                    padding: 10px;
+                    background-color: blue;
+
+
+                }
+                div{
+                    color: black
+                }
+                header
+                {
+                    color: blueviolet;
+                }
+                .panel{
+
+                    background-color: blueviolet;
+                }
+
+            </style>
+
+
+            <p:growl id="messages"/>
+
+            <p:menubar >
+                <p:submenu label="Cadastro de membros" icon="pi pi-fw pi-user">
+                    <p:submenu label="Novo" icon="pi pi-fw pi-plus">
+                        <p:menuitem url="http://localhost:8080/igrejacadastro/formulario.xhtml" value="Novo membro" icon="pi pi-fw pi-user"/>
+                        <p:menuitem value="Video" icon="pi pi-fw pi-video"/>
+                    </p:submenu>
+                    <p:menuitem value="Excluir membros" icon="pi pi-fw pi-trash"/>
+                    <p:divider />
+                    <p:menuitem value="Export" icon="pi pi-fw pi-external-link"/>
+                </p:submenu>
+
+                <p:submenu label="EBD" icon="pi pi-fw pi-book">
+                    <p:menuitem value="Classe Ana" icon="pi pi-fw pi-book"/>
+                    <p:menuitem value="Classe Abraão" icon="pi pi-fw pi-book"/>
+                    <p:menuitem value="Classe Daniel/Ester" icon="pi pi-fw pi-book"/>
+                    <p:menuitem value="Relatório EBD" icon="pi pi-fw pi-book"/>
+                </p:submenu>
+
+                <p:submenu label="Cadastro de congregados" icon="pi pi-fw pi-user">
+                    <p:menuitem value="Novo congregado" icon="pi pi-fw pi-user-plus"/>
+                    <p:menuitem value="Delete" icon="pi pi-fw pi-user-minus"/>
+                    <p:submenu label="Pesquisar congregado" icon="pi pi-fw pi-users">
+
+                        <p:menuitem value="Imprimir relatório" icon="pi pi-fw pi-print"/>
+
+                        <p:menuitem value="List" icon="pi pi-fw pi-bars"/>
+                    </p:submenu>
+                </p:submenu>
+
+                <p:submenu label="Financeiro" icon="pi pi-fw pi-plus">
+                <p:menuitem url="http://localhost:8080/igrejacadastro/cadastodizimo.xhtml" value="Dizimo"  icon="pi pi-fw pi-pencil"/>
+                <p:menuitem value="Oferta" icon="pi pi-fw pi-calendar-plus"/>        
+                <p:menuitem url="http://localhost:8080/igrejacadastro/financeiro.xhtml" value="Relatório financeiro" icon="pi pi-fw pi-print"/>
+                </p:submenu>  
+
+
+
+
+
+                <p:submenu label="Batismos" icon="pi pi-fw pi-file">
+                    <p:menuitem value="Cadastrar batizantes" icon="pi pi-fw pi-file"/>
+                    <p:menuitem value="Imprimir relatório de batismo" icon="pi pi-fw pi-print"/>
+                </p:submenu>
+                <p:divider layout="vertical"/>
+                <f:facet name="options">
+                    <p:button value="Sair" icon="pi pi-fw pi-power-off" />
+                </f:facet>
+            </p:menubar>
+
+            <p:divider/>
+            <br/>
+            <p:tieredMenu style="margin-top: 50px; display: flex; text-align: left; margin-right: 10px; box-shadow: 5px">
+                <p:submenu  label="Congregações" icon="pi pi-fw pi-home">
+                    <p:submenu  label="Cadastar cingregações" icon="pi pi-fw pi-pencil"/>
+                    <p:menuitem value="Excluir Congregações" icon="pi pi-fw pi-trash"/>
+                </p:submenu>
+
+
+                <p:divider />
+                <p:menuitem value="Bairros" icon="pi pi-fw pi-external-link"/>
+                <p:menuitem value="São josé" icon="pi pi-fw pi-home"/>
+                <p:menuitem value="Fátima" icon="pi pi-fw pi-align-right"/>
+                <p:menuitem value="São vicente de paula" icon="pi pi-fw pi-home"/>
+                <p:menuitem value="Betânia" icon="pi pi-fw pi-home"/>
+                <p:menuitem value="brodher viller" icon="pi pi-fw pi-home"/>
+                <p:menuitem value="Planalto" icon="pi pi-fw pi-home"/>
+                <p:menuitem value="Guarita" icon="pi pi-fw pi-home"/>
+                <p:menuitem value="Joâo 23" icon="pi pi-fw pi-home"/>
+
+
+                <p:submenu label="Eventos" icon="pi pi-fw pi-user">
+                    <p:menuitem url="" value="Novo Congresso" icon="pi pi-fw pi-user-plus"/>
+                    <p:menuitem value="Gerar credenciais" icon="pi pi-fw pi-user-minus"/>
+                    <p:submenu label="" icon="pi pi-fw pi-users">
+                        <p:submenu label="Relatório" icon="pi pi-fw pi-filter">
+                            <p:menuitem  value="Imprimir relatório" icon="pi pi-fw pi-print"/>
+                        </p:submenu>
+                        <p:menuitem value="Congragações" icon="pi pi-fw pi-bars"/>
+                    </p:submenu>
+                </p:submenu>
+
+            </p:tieredMenu>
+
+            <div style="float: right; display: flex">
+                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="..." class="d-block w-100" alt="..."/>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="..." class="d-block w-100" alt="..."/>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="..." class="d-block w-100" alt="..."/>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+            </div>
+
+        </h:form> 
+        <h:form> 
+            <p:submenu label="Relatório financeiro" icon="pi pi-fw pi-calendar-times">
+                <p:menuitem  value="Remove" icon="pi pi-fw pi-calendar-minus"/>
+            </p:submenu>
+        </h:form>
+
+        <p:divider/>
+
+        <div>
+            <footer >
+                <h3>Fale conosco</h3>
+                <div>
+                    <table>
+                        contatos
+                    </table>
+                </div>
+            </footer> 
+        </div>
+
+    </h:body>
+</html>

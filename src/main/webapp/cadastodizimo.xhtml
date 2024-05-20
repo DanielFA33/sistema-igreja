@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="jakarta.faces.core">
+    <h:head>
+        <title>Congregare</title>   
+
+        <style>
+
+            .corpo{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-width: 100vh;
+                background: #00cccc;
+            }
+
+            .buttons{
+                margin-top: 50px;
+            }
+
+            .btn{
+                background: var(--primary);
+                padding: 10px 40px;
+                border: solid 2px rgb(22, 22, 22);
+                max-width: 500px;
+                color: black;
+                font-size: 14px;
+                font-weight: 700;
+                border-radius: 60px;
+                text-align: left;
+                margin-right: 20px;
+
+                gap: 10px;
+            }
+            .btn:hover{
+                background: cornflowerblue;
+                color: rgb(4, 4, 4);
+
+            }
+
+            .inputs{
+                
+                justify-content: center;
+                flex-direction: column;
+                padding: 100px 80px;
+                background: #eaedf1;
+                width: 900px;
+                box-shadow: rgba(0, 0, 0, 0.35) 2px 15px 8px;
+                border-radius: 15px;
+                margin: 100px;
+                text-align: center;
+                align-items: center;
+                gap: 15px;
+
+
+
+
+            }
+            .input-group{
+                padding: 10px;
+                outline: none;
+                border: 0;
+                font-size: 15px;
+                margin-bottom: 20px;
+                transition: all 0.5s;
+                gap: 30px
+
+            }
+            .inputtexte{
+
+                padding: 10px;
+                outline: none;
+                border: 0;
+                font-size: 15px;
+                margin-bottom: 20px;
+                transition: all 0.5s;
+            }
+
+
+
+
+        </style>
+    </h:head>
+    <h:body class="corpo">
+
+        <h:form >
+            <section class="inputs">
+                <h2>Cadastro de Valores em Dinheiro</h2>
+
+                <form action="/cadastrar" method="POST">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required="Campo obrigatório"/>
+                    <input type="text" id="nome" name="nome" required="Campo obrigatório"/>
+
+
+                   
+                    <div class="input-group">
+                         <label for="valor">Valor em Dinheiro:</label>
+                        <span class="money-symbol">R$</span>
+                        <input type="number" id="valor" name="valor" min="0" step="0.01" required="Campo Obrigatório"/>
+                        <input type="text" id="nome" name="nome" required="Campo obrigatório"/>                         
+                    </div> 
+                    <div class="inputtexte">
+                        <label>Data</label>
+                        <input type="data" id="data" name="Data" required="Campo obrigatório"/>
+                        <input type="text" id="nome" name="nome" required="Campo obrigatório"/>
+                    </div>
+
+
+
+                    <div class="buttons">
+                        <a href="#" class="btn">Salvar</a>
+                        <a href="http://localhost:8080/igrejacadastro/#" class="btn">Voltar</a>
+                    </div>
+
+
+
+
+
+                </form>
+            </section>
+        </h:form>
+
+    </h:body>
+</html>
